@@ -1,0 +1,464 @@
+/* LESS VARIABLES */
+
+/* Fonts */
+
+@headingFont: 'Archivo Black', sans-serif;
+@bodyFont: 'Montserrat', sans-serif;
+
+/* Colors */
+
+@backgroundColor: rgb(255,255,255);
+@navHoverColor: rgb(255,0,0);
+@darkColor: rgb(0,0,0);
+@formColor: #DBDBDB;
+
+/* Sizes */
+
+@borderRadius: 10px;
+
+@mFontSize: 16px;
+@tFontSize: 18px;
+@dFontSize: 22px;
+@mh2FontSize: 20px;
+@th2FontSize: 24px;
+@dh2FontSize: 34px;
+@dh3FontSize: 32px;
+@dNavSize: 21px;
+@copyrightFontSize: .75em;
+
+
+/* Margins */
+
+@pHeadingMargin: 1em 1em 1em 0;
+@mBodyMargin: 0 1em;
+@tBodyMargin: 0 3em;
+@dBodyMargin: 0 4em;
+@imgMargin: 1em 0;
+
+/* Padding */
+
+@mLogoPadding: .5em;
+@tLogoPadding: 1.5em;
+@dLogoPadding: 2em;
+@navPadding: 1em .5em;
+
+/* Helper Styles */
+
+#container {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img, iframe {
+  max-width: 100%;
+  margin: @imgMargin;
+}
+
+/* MOBILE STYLES */
+
+header img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding: @mLogoPadding;
+  width: 70%;
+
+}
+
+nav {
+  background-color: @darkColor;
+  font-family: @headingFont;
+  font-weight: bold;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+nav ul {
+  display: none;
+}
+
+.active {
+  display: block;
+
+}
+
+
+nav ul li {
+  list-style-type: none;
+  text-align: center;
+  border-top: 2px solid @navHoverColor;
+  display: block;
+  padding: .75em;
+}
+
+nav a {
+  color: @backgroundColor;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: @mFontSize;
+  font-weight: bold;
+}
+
+nav a:active, nav a:hover {
+  background-color: @navHoverColor;
+  color: @darkColor;
+  padding: 1em;
+}
+
+i {
+  width: 100%;
+  padding: 10px 20px;
+  background-color: @darkColor;
+  color: @backgroundColor;
+  text-align: right;
+  box-sizing: border-box;
+  font-size: 20px;
+  cursor: pointer;
+  display: block;
+}
+
+p, h2, h3, h4 {
+  margin: @pHeadingMargin;
+}
+
+
+h2, h3, h4 {
+  font-weight: bold;
+  font-family: @headingFont;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: @mh2FontSize;
+}
+
+h3 {
+    font-size: @tFontSize;
+  }
+
+#twitter {
+  padding-top: 3em;
+}
+
+main {
+  background-color: @backgroundColor;
+  font-size: @mFontSize;
+  font-family: @bodyFont;
+  line-height: 1.5em;
+  margin: @mBodyMargin;
+}
+
+section {
+  margin-bottom: 1em;
+}
+
+dt {
+  font-family: @headingFont;
+  font-weight: bold;
+}
+
+button {
+  font-size: 14px;
+  margin: 1em;
+  padding: .5em;
+  width: auto;
+  height: auto;
+  text-align: center;
+  background-color: @navHoverColor;
+  font-family: @headingFont;
+  border-radius: @borderRadius;
+}
+
+footer {
+  background-color: @darkColor;
+  color: @backgroundColor;
+  font-family: @bodyFont;
+  font-size: @copyrightFontSize;
+  text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  margin-top: 2em;
+}
+
+/* Homepage */
+
+img {
+  width: auto;
+  height: auto;
+  border-radius: @borderRadius;
+}
+
+#slideshow {
+  display: none;
+}
+
+
+#event  {
+  background-color: @navHoverColor;
+  color: @darkColor;
+  font-weight: bold;
+  font-family: @headingFont;
+  width: auto;
+  height: auto;
+  margin: 1em;
+  border-radius: @borderRadius;
+}
+
+#event p {
+  text-align: center;
+  padding: .2em;
+}
+
+
+/* Event Details Page*/
+
+dt {
+  margin: 1em 0;
+}
+
+dd {
+  margin: 1em 0;
+}
+
+
+li:first-child {
+  font-weight: bold;
+  padding: 1em 0;
+}
+
+
+/* Registration Page */
+
+table {
+  margin-right: auto;
+  margin-left: auto;
+  border: 1px solid @darkColor;
+  width: 100%;
+  padding: 1em;
+}
+
+td {
+  border: 1px solid @darkColor;
+  text-align: center;
+}
+
+li:first-child {
+  list-style-type: none;
+}
+
+li, #cost {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+//form
+
+#registrationForm {
+  margin-bottom: 2em;
+}
+
+form p {
+  font-weight: bold;
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid @darkColor;
+  border-radius: @borderRadius;
+  resize: vertical;
+  font-family: @bodyFont;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+}
+
+input[type=submit] {
+  background-color: @navHoverColor;
+  border-radius: @borderRadius;
+  color: @darkColor;
+  padding: 5px 10px;
+  cursor: pointer;
+  float: right;
+  font-family: @headingFont;
+  font-size: @mFontSize;
+}
+
+input[type=submit]:active {
+  background-color: @darkColor;
+  color: @backgroundColor;
+}
+
+.wrapper {
+  border-radius: @borderRadius;
+  background-color: @formColor;
+  padding: 20px;
+}
+
+form#contactForm.wrapper {
+  padding-bottom: 4em;
+}
+
+#finishline {
+  max-width: 50%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2em;
+}
+
+#volunteerContact {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* TABLET STYLES */
+@media only screen and (min-width: 482px) {
+
+  header img {
+    padding: @tLogoPadding;
+    width: 80%;
+  }
+
+  nav {
+    overflow: auto;
+    padding: 1em;
+  }
+
+  nav ul {
+    display: block;
+  }
+
+  nav ul li {
+    display: inline-block;
+    border-top: none;
+    width: 19%;
+  }
+
+  nav a {
+    margin:@navPadding;
+    font-size: @mFontSize;
+  }
+
+  div.toggle {
+    display: none;
+  }
+  .fa-bars:before {
+    display: none;
+  }
+
+  h2 {
+    font-size: @th2FontSize;
+  }
+
+  h3 {
+    font-size: @mh2FontSize;
+  }
+
+  main {
+    font-size: @tFontSize;
+    margin: @tBodyMargin;
+  }
+
+  /* Event Details Page */
+
+  /* Registration Page */
+
+  //form
+
+  form {
+    margin-bottom: 3em;
+  }
+
+  input[type=submit] {
+    margin: 10px;
+    font-size: @tFontSize;
+  }
+
+  /* Contact Page */
+
+
+
+  /* FAQ Page */
+
+}
+
+
+/* DESKTOP STYLES */
+
+@media only screen and (min-width: 1025px) {
+
+  img {
+    padding: @dLogoPadding;
+    width: 100%;
+    border-radius: @borderRadius;
+  }
+
+  nav a {
+    font-size: @dNavSize;
+  }
+
+
+  h2 {
+    font-size: @dh2FontSize;
+  }
+
+  h3 {
+    font-size: @dh3FontSize;
+  }
+
+  main {
+    font-size: @dFontSize;
+    margin: @dBodyMargin;
+  }
+
+
+  aside {
+    float: right;
+    text-align: left;
+  }
+
+  button {
+    font-size: @dFontSize;
+  }
+
+  /* Homepage */
+
+  //slideshow
+  #slide {
+    display: none;
+  }
+
+  #slideshow {
+    display: block;
+    float: right;
+    padding: .5em;
+  }
+
+
+  /* Registration Page */
+
+  //form
+
+  input[type=submit] {
+    font-size: @dFontSize;
+  }
+
+  #finishline {
+    max-width: 70%;
+
+  }
+
+
+
+}
+
+
+
+
